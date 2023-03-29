@@ -18,17 +18,9 @@ import java.util.List;
 @Table(name = "users")
 public class User implements UserDetails{
 
-    @SequenceGenerator(
-            name = "users_sequence",
-            sequenceName = "users_sequence",
-            allocationSize = 1
-    )
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "users_sequence"
-    )
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull(message = "First Name cannot be empty")
     @Column(name = "first_name")
@@ -51,10 +43,6 @@ public class User implements UserDetails{
     @Column(name = "mobile", unique = true)
     @Length(min = 10, message = "Password should be atleast 10 number long")
     private String mobile;
-
-    @Column(name = "address")
-    @Length(min = 50, message = "Address should be atleast 50 characters long")
-    private String address;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -140,10 +128,4 @@ public class User implements UserDetails{
     public String getLastName() { return lastName; }
 
     public void setLastName(String lastName) { this.lastName = lastName; }
-
-    public String getAddress() { return address; }
-
-    public void setAddress(String address) { this.address = address; }
-
-
 }
