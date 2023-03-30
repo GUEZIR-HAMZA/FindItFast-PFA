@@ -8,17 +8,10 @@ import pfa.project.finditfastbackend.Model.User;
 
 import java.util.Optional;
 
-@EnableJpaRepositories
-@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    @Query("select u from User u where u.email =: email")
+    @Query("SELECT u FROM User u WHERE u.email =:email")
     Optional<User> findByEmail(String email);
-    @Query("select u from User u where u.mobile =: mobile")
-    Optional<User> findByMobile(String mobile);
 
-    @Query("select u from User u where u.email =: username and u.password =: password")
-    User findByUsernameAndPassword(String username, String password);
-
-
-
+    @Query("SELECT CASE WHEN COUNT(u) > 0 THEN true ELSE false END FROM User u WHERE u.email =:email")
+    boolean existsByEmail(String email);
 }

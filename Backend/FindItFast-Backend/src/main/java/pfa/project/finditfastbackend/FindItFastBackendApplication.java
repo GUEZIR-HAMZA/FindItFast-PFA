@@ -8,7 +8,6 @@ public class FindItFastBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FindItFastBackendApplication.class, args);
-		System.out.println("Hello World");
 	}
 
 }

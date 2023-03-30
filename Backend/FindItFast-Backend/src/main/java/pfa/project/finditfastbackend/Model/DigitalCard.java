@@ -35,6 +35,8 @@ public class DigitalCard {
     private String facebookProfile;
     @Column(name = "instagram_profile", nullable = true)
     private String instagramProfile;
+    @ElementCollection
+    private List<String> CustomText;
 
     // Address Information
     @Column(name = "street_address", nullable = false, length = 512)
@@ -52,16 +54,22 @@ public class DigitalCard {
     @Column(name = "profile_picture", nullable = true)
     private byte[] profilePicture;
 
+    @ElementCollection
+    private List<byte[]> Address_pictures = new ArrayList<>();
+
     // Professional Experience
     @ElementCollection
-    private List<String> experiences = new ArrayList<>();
+    @Column(name = "experiences", nullable = true, length = 1024)
+    private Set<String> experiences = new HashSet<>();
 
     // Education
     @ElementCollection
-    private List<String> educations = new ArrayList<>();
+    @Column(name = "educations", nullable = true, length = 1024)
+    private Set<String> educations = new HashSet<>();
 
     // Skills and Expertise
     @ElementCollection
+
     private Set<String> skills = new HashSet<>();
 
     // Interests and Hobbies
@@ -70,15 +78,15 @@ public class DigitalCard {
 
     // Awards and Honors
 
-    @ElementCollection
-    private List<String> awards = new ArrayList<>();
+//    @ElementCollection
+//    private List<String> awards = new ArrayList<>();
 
     // Certifications and Licenses
     @ElementCollection
-    private List<String> certifications = new ArrayList<>();
+    private Set<String> certifications = new HashSet<>();
 
     // Personal Statement or Bio
-    @Lob
+    @Column(name = "bio", nullable = true, length = 1024)
     private String bio;
 
     // getters and setters
@@ -212,19 +220,19 @@ public class DigitalCard {
         this.profilePicture = profilePicture;
     }
 
-    public List<String> getExperiences() {
+    public Set<String> getExperiences() {
         return experiences;
     }
 
-    public void setExperiences(List<String> experiences) {
+    public void setExperiences(Set<String> experiences) {
         this.experiences = experiences;
     }
 
-    public List<String> getEducations() {
+    public Set<String> getEducations() {
         return educations;
     }
 
-    public void setEducations(List<String> educations) {
+    public void setEducations(Set<String> educations) {
         this.educations = educations;
     }
 
@@ -244,19 +252,19 @@ public class DigitalCard {
         this.interests = interests;
     }
 
-    public List<String> getAwards() {
-        return awards;
-    }
+//    public List<String> getAwards() {
+//        return awards;
+//    }
 
-    public void setAwards(List<String> awards) {
-        this.awards = awards;
-    }
+//    public void setAwards(List<String> awards) {
+//        this.awards = awards;
+//    }
 
-    public List<String> getCertifications() {
+    public Set<String> getCertifications() {
         return certifications;
     }
 
-    public void setCertifications(List<String> certifications) {
+    public void setCertifications(Set<String> certifications) {
         this.certifications = certifications;
     }
 
