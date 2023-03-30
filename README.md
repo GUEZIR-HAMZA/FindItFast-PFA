@@ -10,18 +10,25 @@ src
         │       └── project
         │           └── finditfastbackend
         │               ├── FindItFastBackendApplication.java
-        │               ├── config
-        │               │   ├── CustomLoginSucessHandler.java
-        │               │   ├── WebMvcConfig.java
-        │               │   └── WebSecurityConfig.java
         │               ├── controller
         │               │   ├── AdminController.java
         │               │   ├── AuthController.java
-        │               │   └── UserController.java
+        │               │   ├── UserController.java
+        │               │   └── ErrorController.java
+        │               ├── CustomErrors
+        │               │   └── CustomErrorsResponse.java
+        │               ├── CustomExceptions
+        │               │   ├── DegitalCardExceptions
+        │               │   └── UserExceptions
+        │               │       ├── AthenificationException.java
+        │               │       ├── BadCredentialsException.java
+        │               │       ├── UserAlreadyExistException.java
+        │               │       └── UsernameNotFoundException.java
         │               ├── model
-        │               │   ├── Role.java
+        │               │   ├── DegitalCard.java
         │               │   └── User.java
         │               ├── repository
+        │               │   ├── DegitalCardRepository.java
         │               │   └── UserRepository.java
         │               └── service
         │                   ├── UserServiceImpl.java
