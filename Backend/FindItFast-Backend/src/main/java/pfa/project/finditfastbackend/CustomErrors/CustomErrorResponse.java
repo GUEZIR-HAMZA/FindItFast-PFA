@@ -1,4 +1,4 @@
-package pfa.project.finditfastbackend.Controller;
+package pfa.project.finditfastbackend.CustomErrors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
