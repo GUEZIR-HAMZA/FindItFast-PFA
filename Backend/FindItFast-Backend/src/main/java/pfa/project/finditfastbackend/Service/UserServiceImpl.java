@@ -1,60 +1,39 @@
 package pfa.project.finditfastbackend.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import pfa.project.finditfastbackend.Model.User;
 import pfa.project.finditfastbackend.Repository.UserRepository;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.AuthenticationException;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlreadyExistException;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements UserService, UserDetailsService {
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
+public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Override
-    public void saveUser(User user) {
-        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
-        user.setPassword(encodedPassword);
-//        user.setRole(Role.USER);
+    public boolean register(User user) throws UserAlreadyExistException {
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new UserAlreadyExistException("Email already exists: " + user.getEmail());
+        }
         userRepository.save(user);
+        return true;
     }
 
     @Override
-    public List<Object> isUserPresent(User user) {
-        boolean userExists = false;
-        String message = null;
-        Optional<User> existingUserEmail = userRepository.findByEmail(user.getEmail());
-        if(existingUserEmail.isPresent()){
-            userExists = true;
-            message = "Email Already Present!";
+    public boolean login(String email, String password) throws AuthenticationException {
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            throw new AuthenticationException("Invalid email or password");
         }
-        Optional<User> existingUserMobile = userRepository.findByMobile(user.getMobile());
-        if(existingUserMobile.isPresent()){
-            userExists = true;
-            message = "Mobile Number Already Present!";
+        User user = userOptional.get();
+        if (!user.getPassword().equals(password)) {
+            throw new AuthenticationException("Invalid email or password");
         }
-        if (existingUserEmail.isPresent() && existingUserMobile.isPresent()) {
-            message = "Email and Mobile Number Both Already Present!";
-        }
-        System.out.println("existingUserEmail.isPresent() - "+existingUserEmail.isPresent()+"existingUserMobile.isPresent() - "+existingUserMobile.isPresent());
-        return Arrays.asList(userExists, message);
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return userRepository.findByEmail(email).orElseThrow(
-                ()-> new UsernameNotFoundException(
-                        String.format("USER_NOT_FOUND", email)
-                ));
+        return true;
     }
 }

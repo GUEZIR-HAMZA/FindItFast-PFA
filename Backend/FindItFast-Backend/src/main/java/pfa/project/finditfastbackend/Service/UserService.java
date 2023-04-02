@@ -2,11 +2,10 @@ package pfa.project.finditfastbackend.Service;
 
 
 import pfa.project.finditfastbackend.Model.User;
-
-import java.util.List;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.AuthenticationException;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlreadyExistException;
 
 public interface UserService {
-
-    void saveUser(User user);
-    List<Object> isUserPresent(User user);
+    boolean register(User user) throws UserAlreadyExistException;
+    boolean login(String email, String password) throws AuthenticationException;
 }

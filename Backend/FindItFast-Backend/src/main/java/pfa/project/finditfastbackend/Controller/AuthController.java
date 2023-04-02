@@ -3,48 +3,36 @@ package pfa.project.finditfastbackend.Controller;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import pfa.project.finditfastbackend.Model.User;
 import pfa.project.finditfastbackend.Service.UserService;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.AuthenticationException;
+import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlreadyExistException;
 
-import java.util.List;
-
-@Controller
+@RestController
+@RequestMapping("api/auth")
 public class AuthController {
+
     @Autowired
-    UserService userService;
+    private UserService userService;
 
-    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
-    public String login(){
-        return "auth/login";
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody User user) throws UserAlreadyExistException {
+        if (userService.register(user)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        }
     }
 
-    @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
-    public String register(Model model){
-        model.addAttribute("user", new User());
-        return "auth/register";
-    }
-
-    @RequestMapping(value = {"/register"}, method = RequestMethod.POST)
-    public String registerUser(Model model, @Valid User user, BindingResult bindingResult){
-        if(bindingResult.hasErrors()){
-            model.addAttribute("successMessage", "User registered successfully!");
-            model.addAttribute("bindingResult", bindingResult);
-            return "auth/register";
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestParam("email") String email, @RequestParam("password") String password) throws AuthenticationException {
+        if (userService.login(email, password)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
-        List<Object> userPresentObj = userService.isUserPresent(user);
-        if((Boolean) userPresentObj.get(0)){
-            model.addAttribute("successMessage", userPresentObj.get(1));
-            return "auth/register";
-        }
-
-        userService.saveUser(user);
-        model.addAttribute("successMessage", "User registered successfully!");
-
-        return "auth/login";
     }
 }
