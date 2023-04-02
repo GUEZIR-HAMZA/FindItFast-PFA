@@ -1,6 +1,6 @@
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components/landingpage";
-import FeedbackCard from "./components/landingpage/FeedbackCard";
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import FeedbackCard from "./components/FeedbackCard";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
@@ -23,6 +23,7 @@ const App = () => (
         <Billing />
         <CardDeal />
         <Testimonials />
+        
         <CTA />
         <Footer />
       </div>

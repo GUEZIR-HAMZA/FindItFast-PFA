@@ -1,4 +1,4 @@
-import { people01, people02, people03, people04, people05, people06, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -17,11 +17,7 @@ export const navLinks = [
     id: "clients",
     title: "Clients",
   },
-  {
-    id: "se connecter",
-    title: "Se connecter",
-    link: "/login",
-  },
+  
 ];
 
 export const features = [
@@ -52,53 +48,51 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Ti9o biya 7na rah wa3rin",
+      "journée inoubliable avec les amis (y)",
     name: "Hamza Guezir",
-    title: "Founder & Leader",
+    title: "User",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "For us tracking you is easier than making 7rira",
-    name: "Ines Elmehdi",
-    title: "Founder & Leader",
+      "Top",
+    name: "Ines El mehdi",
+    title: "User",
     img: people02,
   },
 
   {
     id: "feedback-3",
     content:
-      "Ana li Kayn",
+      "Professional & easy to use ",
     name: "Yahya Elaatar",
-    title: "Founder & Leader",
+    title: "User",
     img: people04,
   },
   {
     id: "feedback-4",
     content:
-      "Daba a5oute 7na rah ti9a ",
+      "Ya laytani konto toraba",
     name: "Nourdine Marroub",
-    title: "Founder & Leader",
-    img: people03,
+    title: "User",
+    img: people07,
   },
   {
     id: "feedback-5",
     content:
-      "Daba 4a aji goliya mat5afsh a sa7be",
-    name: "Mossaab Elhamaoui",
-    title: "Founder & Leader",
-    img: people06,
-  },
-  {
+      "hadshi jdid f jdida",
+    name: "Ilyas Elmalki",
+    title: "User",
+    img: people03,
+  }, {
     id: "feedback-6",
     content:
-      "5li liya shi 9tila",
-    name: "Hamza ELkabire",
-    title: "Founder & Leader",
-    img: people05,
+      "wa3r hadshi alwlidat",
+    name: "Taha Essou",
+    title: "User",
+    img: people03,
   },
-
 ];
 
 export const stats = [
