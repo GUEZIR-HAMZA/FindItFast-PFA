@@ -1,8 +1,8 @@
-import styles from "../style";
-import { arrowUp } from "../assets";
+import styles from "../../style";
+import { arrowUp } from "../../assets";
 
 const handleClick = () => {
-  window.location.href = 'http://localhost:5173/my-page';
+  window.location.href = 'http://localhost:5174/my-page';
 }
 
 const GetStarted = () => (
