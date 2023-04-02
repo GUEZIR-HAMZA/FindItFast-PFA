@@ -1,7 +1,7 @@
 import { useState } from "react";
-
-import { close, logo, menu } from "../../assets";
-import { navLinks } from "../../constants";
+import styles from "./Button"
+import { close, logo, menu } from "../assets";
+import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -10,7 +10,6 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
       <img src={logo} alt="findme" className="w-[300px] h-[70px]" />
-
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
@@ -26,8 +25,9 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
-     
+      <button classname="se-connecter">
+    Se connecter
+  </button>
     </nav>
   );
 };
