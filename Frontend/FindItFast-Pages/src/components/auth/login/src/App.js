@@ -1,8 +1,36 @@
- import React from "react";
- import * as Components from './Components';
+import React, { useState } from "react";
+import * as Components from './Components';
 
- function App() {
-     const [signIn, toggle] = React.useState(true);
+function App() {
+  const [signIn, toggle] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignUp = async (event) => {
+    event.preventDefault();
+    const response = await fetch("/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await response.json();
+    console.log(data); // Handle response from server
+  };
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    const response = await fetch("/api/authenticate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await response.json();
+    console.log(data); // Handle response from server
+  };
       return(
           <Components.Container>
               <Components.SignUpContainer signinIn={signIn}>
