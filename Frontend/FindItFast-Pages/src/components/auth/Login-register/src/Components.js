@@ -199,7 +199,7 @@ transform: translate(-50%, -50%);
  text-decoration: none;
  font-family: Montserrat,sans-serif;
  box-sizing: border-box;
- background: linear-gradient(90deg,, #00ff9d, #339476, #bef3f5, violet,purple, blue);
+ background: linear-gradient(90deg, #00ff9d, #339476, #bef3f5, violet,purple, blue);
  background-size: 400%;
  border-radius: 20px;
  border: 1px solid #000000;
