@@ -82,5 +82,3 @@ function App() {
           </Components.Container>
       )
  }
-
- export default App;
