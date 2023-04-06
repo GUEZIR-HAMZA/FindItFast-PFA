@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="modifying in structure of the project : deleting additional repos and files">
+    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding some functionality in different classes &amp; interfaces with optimizing code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/FindItFast-Pages/src/components/auth/login/src/Components.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/FindItFast-Pages/src/components/auth/Login-register/src/Components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +49,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "B2-Noureddine-Hamza",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Nour/Desktop/FindItFast-PFA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680557845842</updated>
       <workItem from="1680557847449" duration="3921000" />
+      <workItem from="1680781744086" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1680558290451</created>
@@ -115,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="modifying in structure of the project : deleting additional repos and files" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifying in structure of the project : deleting additional repos and files" />
+    <MESSAGE value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
   </component>
 </project>
