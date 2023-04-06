@@ -1,9 +1,11 @@
 package pfa.project.finditfastbackend.Service.digitalcard;
 
+import org.springframework.stereotype.Service;
 import pfa.project.finditfastbackend.Model.DigitalCard;
 
 import java.util.List;
 
+@Service
 public class DigitalCardServiceImpl implements DigitalCardService{
     @Override
     public boolean addDigitalCard(DigitalCard digitalCard) {
