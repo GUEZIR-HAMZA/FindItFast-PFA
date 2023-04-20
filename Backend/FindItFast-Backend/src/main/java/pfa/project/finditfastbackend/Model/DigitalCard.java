@@ -38,6 +38,7 @@ public class DigitalCard {
     private String instagramProfile;
     @Column(name = "telegram_profile", nullable = true)
     private String telegramProfile;
+
     @ElementCollection
     private List<String> CustomText;
 
@@ -53,12 +54,17 @@ public class DigitalCard {
     @Column(name = "country", nullable = false)
     private String country;
 
+    @ElementCollection
+    private List<byte[]> Address_pictures = new ArrayList<>();
+
+    @Column(name = "address_list", nullable = false)
+    @ElementCollection
+    private List<String> Address_list;
+
     // Profile Picture or Logo
     @Column(name = "profile_picture", nullable = true)
     private byte[] profilePicture;
 
-    @ElementCollection
-    private List<byte[]> Address_pictures = new ArrayList<>();
 
     // Professional Experience
     @ElementCollection
@@ -190,6 +196,7 @@ public class DigitalCard {
     public void setTelegramProfile(String telegramProfile) {
         this.telegramProfile = telegramProfile;
     }
+
     public String getStreetAddress() {
         return streetAddress;
     }
@@ -270,14 +277,6 @@ public class DigitalCard {
         this.interests = interests;
     }
 
-//    public List<String> getAwards() {
-//        return awards;
-//    }
-
-//    public void setAwards(List<String> awards) {
-//        this.awards = awards;
-//    }
-
     public Set<String> getCertifications() {
         return certifications;
     }
@@ -294,16 +293,17 @@ public class DigitalCard {
         this.bio = bio;
     }
 
-    public void setAddress(String street_address, String city, String state, String postal_code, String country) {
+    public void setAddress(String street_address, String city, String state, String postal_code, String country, byte[] address_picture){
         this.streetAddress = street_address;
         this.city = city;
         this.state = state;
         this.postalCode = postal_code;
         this.country = country;
+        this.Address_pictures.add(address_picture);
+        this.Address_list.add(this.streetAddress + ", " + this.city + ", " + this.state + ", " + this.postalCode + ", " + this.country);
     }
 
-    public String getAdress(){
-        return this.streetAddress + ", " + this.city + ", " + this.state + ", " + this.postalCode + ", " + this.country;
+    public String getAddressList(){
+        return this.Address_list.toString();
     }
 }
-
