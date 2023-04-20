@@ -276,5 +276,17 @@ public class DigitalCard {
     public void setBio(String bio) {
         this.bio = bio;
     }
+
+    public void setAddress(String street_address, String city, String state, String postal_code, String country) {
+        this.streetAddress = street_address;
+        this.city = city;
+        this.state = state;
+        this.postalCode = postal_code;
+        this.country = country;
+    }
+
+    public String getAdress(){
+        return this.streetAddress + ", " + this.city + ", " + this.state + ", " + this.postalCode + ", " + this.country;
+    }
 }
 

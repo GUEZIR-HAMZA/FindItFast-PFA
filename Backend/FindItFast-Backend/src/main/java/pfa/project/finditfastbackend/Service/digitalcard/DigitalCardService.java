@@ -12,4 +12,6 @@ public interface DigitalCardService {
     List<DigitalCard> getAllDigitalCards();
 
     DigitalCard getDigitalCardById(Long id);
+
+    boolean addAddressToDigitalCard(Long id, String street_address, String city, String state, String zip_code,String country);
 }

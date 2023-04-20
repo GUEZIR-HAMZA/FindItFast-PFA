@@ -15,8 +15,11 @@ import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlready
 @RequestMapping("api/auth")
 public class AuthController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public AuthController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody User user) throws UserAlreadyExistException {
