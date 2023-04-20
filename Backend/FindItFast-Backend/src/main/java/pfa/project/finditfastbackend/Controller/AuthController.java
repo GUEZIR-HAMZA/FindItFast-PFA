@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pfa.project.finditfastbackend.Model.User;
-import pfa.project.finditfastbackend.Service.UserService;
+import pfa.project.finditfastbackend.Service.user.UserService;
 import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.AuthenticationException;
 import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlreadyExistException;
 
@@ -15,8 +15,11 @@ import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlready
 @RequestMapping("api/auth")
 public class AuthController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public AuthController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody User user) throws UserAlreadyExistException {

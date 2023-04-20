@@ -1,4 +1,4 @@
-package pfa.project.finditfastbackend.Service;
+package pfa.project.finditfastbackend.Service.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
