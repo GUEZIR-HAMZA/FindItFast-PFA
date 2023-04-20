@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding some functionality in different classes &amp; interfaces with optimizing code.">
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/BadCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding some functionality in different classes &amp; interfaces with optimizing code." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="B2-Noureddine-Hamza" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "B2-Noureddine-Hamza",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/4IIR/PFA/FindItFast-PFA/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions",
     "node.js.detected.package.eslint": "true",
@@ -94,6 +86,7 @@
       <workItem from="1680781744086" duration="1745000" />
       <workItem from="1680819385919" duration="2523000" />
       <workItem from="1681943336810" duration="2896000" />
+      <workItem from="1682027448682" duration="256000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1680558290451</created>

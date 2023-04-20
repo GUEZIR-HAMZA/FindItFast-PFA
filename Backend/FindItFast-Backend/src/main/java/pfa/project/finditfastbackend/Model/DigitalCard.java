@@ -36,6 +36,8 @@ public class DigitalCard {
     private String facebookProfile;
     @Column(name = "instagram_profile", nullable = true)
     private String instagramProfile;
+    @Column(name = "telegram_profile", nullable = true)
+    private String telegramProfile;
     @ElementCollection
     private List<String> CustomText;
 
@@ -173,6 +175,21 @@ public class DigitalCard {
         this.facebookProfile = facebookProfile;
     }
 
+    public String getInstagramProfile() {
+        return instagramProfile;
+    }
+
+    public void setInstagramProfile(String instagramProfile) {
+        this.instagramProfile = instagramProfile;
+    }
+
+    public String getTelegramProfile() {
+        return telegramProfile;
+    }
+
+    public void setTelegramProfile(String telegramProfile) {
+        this.telegramProfile = telegramProfile;
+    }
     public String getStreetAddress() {
         return streetAddress;
     }
