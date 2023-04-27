@@ -20,6 +20,7 @@ public class User {
     @Column(name = "username", unique = true)
     private String username;
 
+
     @NotNull(message = "Email cannot be empty")
     @Email(message = "Please enter a valid email address")
     @Column(name = "email", unique = true)
@@ -48,7 +49,8 @@ public class User {
     @Column(name = "enabled")
     private Boolean enabled = true;
 
-    // Getters and Setters
+
+
     public String getEmail() { return email; }
 
     public void setEmail(String email) { this.email = email; }
