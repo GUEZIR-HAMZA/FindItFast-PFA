@@ -61,12 +61,11 @@ public class DigitalCard {
     @ElementCollection
     private List<String> Address_list;
 
-    // Profile Picture or Logo
+
     @Column(name = "profile_picture", nullable = true)
     private byte[] profilePicture;
 
 
-    // Professional Experience
     @ElementCollection
     @Column(name = "experiences", nullable = true, length = 1024)
     private Set<String> experiences = new HashSet<>();

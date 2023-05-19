@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding details of DigitalCard model with optimizing code." />
+    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding details of User model with optimizing code.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +99,9 @@
       <workItem from="1681943336810" duration="2896000" />
       <workItem from="1682027448682" duration="808000" />
       <workItem from="1682029740611" duration="636000" />
+      <workItem from="1682589915820" duration="708000" />
+      <workItem from="1684496133277" duration="363000" />
+      <workItem from="1684498435796" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1680558290451</created>
@@ -139,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682030511029</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding details of User model with optimizing code.">
+      <created>1682590737579</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682590737579</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +174,7 @@
     <MESSAGE value="modifying in structure of the project : deleting additional repos and files" />
     <MESSAGE value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
     <MESSAGE value="Adding details of DigitalCard model with optimizing code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding details of DigitalCard model with optimizing code." />
+    <MESSAGE value="Adding details of User model with optimizing code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding details of User model with optimizing code." />
   </component>
 </project>
