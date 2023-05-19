@@ -2,6 +2,7 @@ package pfa.project.finditfastbackend.Model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -15,8 +16,6 @@ public class DigitalCard {
     private Long id;
 
     // Basic Information
-
-
     @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "title", nullable = false)
@@ -29,55 +28,75 @@ public class DigitalCard {
     private String phone;
     @Column(name = "website", nullable = true)
     private String website;
-
-    // Personal Statement or Bio
-    @Column(name = "about", nullable = true, length = 1024)
-    private String about;
-
-    // Social Media
     @Column(name = "linkedin_profile", nullable = true)
     private String linkedinProfile;
-    @Column(name = "facebook_profile", nullable = true)
-    private String facebookProfile;
     @Column(name = "twitter_profile", nullable = true)
     private String twitterProfile;
+    @Column(name = "facebook_profile", nullable = true)
+    private String facebookProfile;
     @Column(name = "instagram_profile", nullable = true)
     private String instagramProfile;
     @Column(name = "telegram_profile", nullable = true)
     private String telegramProfile;
 
+    @ElementCollection
+    private List<String> CustomText;
 
-    @OneToMany
-    @JoinTable(name = "digital_card_address",
-            joinColumns = @JoinColumn(name = "id"),
-            inverseJoinColumns = @JoinColumn(name = "id_address"))
-    @Column(name = "address_list", nullable = true)
-    private List<UserAddress> Address_list;
+    // Address Information
+    @Column(name = "street_address", nullable = false, length = 512)
+    private String streetAddress;
+    @Column(name = "city", nullable = false)
+    private String city;
+    @Column(name = "state", nullable = false)
+    private String state;
+    @Column(name = "postal_code", nullable = false)
+    private String postalCode;
+    @Column(name = "country", nullable = false)
+    private String country;
+
+    @ElementCollection
+    private List<byte[]> Address_pictures = new ArrayList<>();
+
+    @Column(name = "address_list", nullable = false)
+    @ElementCollection
+    private List<String> Address_list;
 
     // Profile Picture or Logo
     @Column(name = "profile_picture", nullable = true)
     private byte[] profilePicture;
 
 
-    //stock digital card url
-    @Column(name = "url", nullable = false)
-    private String Url;
+    // Professional Experience
+    @ElementCollection
+    @Column(name = "experiences", nullable = true, length = 1024)
+    private Set<String> experiences = new HashSet<>();
 
-//    // Skills and Expertise
-//    @ElementCollection
-//
-//    private Set<String> skills = new HashSet<>();
-//
-//    // Interests and Hobbies
-//    @ElementCollection
-//    private Set<String> interests = new HashSet<>();
-//
-//    // Awards and Honors
-//
-//    // Certifications and Licenses
-//    @ElementCollection
-//    private Set<String> certifications = new HashSet<>();
+    // Education
+    @ElementCollection
+    @Column(name = "educations", nullable = true, length = 1024)
+    private Set<String> educations = new HashSet<>();
 
+    // Skills and Expertise
+    @ElementCollection
+
+    private Set<String> skills = new HashSet<>();
+
+    // Interests and Hobbies
+    @ElementCollection
+    private Set<String> interests = new HashSet<>();
+
+    // Awards and Honors
+
+//    @ElementCollection
+//    private List<String> awards = new ArrayList<>();
+
+    // Certifications and Licenses
+    @ElementCollection
+    private Set<String> certifications = new HashSet<>();
+
+    // Personal Statement or Bio
+    @Column(name = "bio", nullable = true, length = 1024)
+    private String bio;
 
     // getters and setters
 
@@ -178,6 +197,46 @@ public class DigitalCard {
         this.telegramProfile = telegramProfile;
     }
 
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
     public byte[] getProfilePicture() {
         return profilePicture;
     }
@@ -186,53 +245,65 @@ public class DigitalCard {
         this.profilePicture = profilePicture;
     }
 
-
-
-//    public Set<String> getSkills() {
-//        return skills;
-//    }
-//
-//    public void setSkills(Set<String> skills) {
-//        this.skills = skills;
-//    }
-//
-//    public Set<String> getInterests() {
-//        return interests;
-//    }
-//
-//    public void setInterests(Set<String> interests) {
-//        this.interests = interests;
-//    }
-//
-//    public Set<String> getCertifications() {
-//        return certifications;
-//    }
-//
-//    public void setCertifications(Set<String> certifications) {
-//        this.certifications = certifications;
-//    }
-
-    public void setAbout(String about) {
-        this.about = about;
+    public Set<String> getExperiences() {
+        return experiences;
     }
 
-    public String getAbout() {
-        return about;
+    public void setExperiences(Set<String> experiences) {
+        this.experiences = experiences;
+    }
+
+    public Set<String> getEducations() {
+        return educations;
+    }
+
+    public void setEducations(Set<String> educations) {
+        this.educations = educations;
+    }
+
+    public Set<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(Set<String> skills) {
+        this.skills = skills;
+    }
+
+    public Set<String> getInterests() {
+        return interests;
+    }
+
+    public void setInterests(Set<String> interests) {
+        this.interests = interests;
+    }
+
+    public Set<String> getCertifications() {
+        return certifications;
+    }
+
+    public void setCertifications(Set<String> certifications) {
+        this.certifications = certifications;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public void setAddress(String street_address, String city, String state, String postal_code, String country, byte[] address_picture){
+        this.streetAddress = street_address;
+        this.city = city;
+        this.state = state;
+        this.postalCode = postal_code;
+        this.country = country;
+        this.Address_pictures.add(address_picture);
+        this.Address_list.add(this.streetAddress + ", " + this.city + ", " + this.state + ", " + this.postalCode + ", " + this.country);
     }
 
     public String getAddressList(){
         return this.Address_list.toString();
-    }
-
-    public void setAddressList(List<UserAddress> address_list){
-        this.Address_list = address_list;
-    }
-
-    public String getUrl(){
-        return this.Url;
-    }
-
-    public void setUrl(String url){
-        this.Url = url;
     }
 }
