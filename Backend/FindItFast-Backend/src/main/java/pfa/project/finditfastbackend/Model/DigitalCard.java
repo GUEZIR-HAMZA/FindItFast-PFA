@@ -61,21 +61,17 @@ public class DigitalCard {
     @ElementCollection
     private List<String> Address_list;
 
-
     @Column(name = "profile_picture", nullable = true)
     private byte[] profilePicture;
-
 
     @ElementCollection
     @Column(name = "experiences", nullable = true, length = 1024)
     private Set<String> experiences = new HashSet<>();
 
-    // Education
     @ElementCollection
     @Column(name = "educations", nullable = true, length = 1024)
     private Set<String> educations = new HashSet<>();
 
-    // Skills and Expertise
     @ElementCollection
 
     private Set<String> skills = new HashSet<>();
