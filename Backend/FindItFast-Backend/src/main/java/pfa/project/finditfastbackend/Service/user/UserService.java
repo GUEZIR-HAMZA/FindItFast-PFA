@@ -1,4 +1,4 @@
-package pfa.project.finditfastbackend.Service;
+package pfa.project.finditfastbackend.Service.user;
 
 
 import pfa.project.finditfastbackend.Model.User;

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding some functionality in different classes &amp; interfaces with optimizing code.">
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/BadCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="B2-Noureddine-Hamza" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NvwQ3yiVTJ2BnugWu2GexsXz1N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/4IIR/PFA/FindItFast-PFA/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "26801309b6a391f3c92b5865cb6c20b4",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\4IIR\PFA\FindItFast-PFA\Backend\FindItFast-Backend\src\main\java\pfa\project\finditfastbackend\CustomExceptions\CardExceptions" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FindItFastBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="FindItFast-Backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pfa.project.finditfastbackend.FindItFastBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="" />
+      <created>1680557845842</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680557845842</updated>
+      <workItem from="1680557847449" duration="3921000" />
+      <workItem from="1680781744086" duration="1745000" />
+      <workItem from="1680819385919" duration="2523000" />
+      <workItem from="1681943336810" duration="2896000" />
+    </task>
+    <task id="LOCAL-00001" summary="test commit">
+      <created>1680558290451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680558290451</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test commit">
+      <created>1680558317355</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680558317355</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modifying in structure of the project : deleting additional repos and files">
+      <created>1680563745260</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680563745260</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test commit" />
+    <MESSAGE value="modifying in structure of the project : deleting additional repos and files" />
+    <MESSAGE value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
+  </component>
+</project>
