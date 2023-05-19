@@ -25,18 +25,15 @@ public class User {
     //@Column(name = "last_name")
     //private String lastName;
 
-    @NotNull(message = "Username cannot be empty")
-    @Column(name = "username", unique = true)
+    @Column(name = "username", nullable = false)
     private String username;
 
-    @NotNull(message = "Email cannot be empty")
     @Email(message = "Please enter a valid email address")
-    @Column(name = "email", unique = true)
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @NotNull(message = "Password cannot be empty")
-    @Length(min = 7, message = "Password should be atleast 7 characters long")
-    @Column(name = "password")
+//    @Length(min = 7, message = "Password should be atleast 7 characters long")
+    @Column(name = "password",nullable = false)
     private String password;
 
     @Column(name = "mobile", unique = true)

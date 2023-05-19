@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="Adding some functionality in different classes &amp; interfaces with optimizing code.">
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/BadCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions/CardNotFoundException.java" afterDir="false" />
+    <list default="true" id="20c6ca98-8c3c-4b5c-aac9-b455dd30b2a9" name="Changes" comment="1- filling CardController by adding:&#10;          - @PostMapping(&quot;/all&quot;): returns all the cards in database&#10;          - @PostMapping(&quot;/add&quot;): I don't have to explain&#10;          - @PostMapping(&quot;/update&quot;): also here&#10;          - @PostMapping(&quot;/delete&quot;): no comment">
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/UserAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/UserAddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/userAddress/UserAddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/userAddress/UserAddressServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/DigitalCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/DegitalCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/digitalcard/DigitalCardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/Service/user/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,27 +58,27 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/4IIR/PFA/FindItFast-PFA/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "26801309b6a391f3c92b5865cb6c20b4",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/4IIR/PFA/FindItFast-PFA/Backend/FindItFast-Backend/src/main/java/pfa/project/finditfastbackend/CustomExceptions/CardExceptions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;26801309b6a391f3c92b5865cb6c20b4&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\4IIR\PFA\FindItFast-PFA\Backend\FindItFast-Backend\src\main\java\pfa\project\finditfastbackend\CustomExceptions\CardExceptions" />
@@ -93,7 +104,10 @@
       <workItem from="1680557847449" duration="3921000" />
       <workItem from="1680781744086" duration="1745000" />
       <workItem from="1680819385919" duration="2523000" />
-      <workItem from="1681943336810" duration="2896000" />
+      <workItem from="1681943336810" duration="5072000" />
+      <workItem from="1682002090382" duration="10557000" />
+      <workItem from="1684440096665" duration="5603000" />
+      <workItem from="1684487354300" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1680558290451</created>
@@ -116,7 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680563745260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1- small modify on authcontroller by replacing authowired by constructor&#10;2- adding Exceptions to CardException: &#10;             - CardNotFoundException&#10;             - CardAlreadyExistException&#10;             - BadCredentialsException&#10;3- adding Query in DegitalCardRepository : findByName&#10;4- adding getter and setter of address in DigitalCard Model&#10;5- adding addAddressToDigitalCard function in DigitalCardService&#10;6- completing all the implemented functions in DigitalCardServiceImpl in addition the added addAddressToDigitalCard function">
+      <created>1681947405880</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681947405880</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1- filling CardController by adding:&#10;          - @PostMapping(&quot;/all&quot;): returns all the cards in database&#10;          - @PostMapping(&quot;/add&quot;): I don't have to explain&#10;          - @PostMapping(&quot;/update&quot;): also here&#10;          - @PostMapping(&quot;/delete&quot;): no comment">
+      <created>1681947661089</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681947661089</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +165,8 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="modifying in structure of the project : deleting additional repos and files" />
     <MESSAGE value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding some functionality in different classes &amp; interfaces with optimizing code." />
+    <MESSAGE value="1- small modify on authcontroller by replacing authowired by constructor&#10;2- adding Exceptions to CardException: &#10;             - CardNotFoundException&#10;             - CardAlreadyExistException&#10;             - BadCredentialsException&#10;3- adding Query in DegitalCardRepository : findByName&#10;4- adding getter and setter of address in DigitalCard Model&#10;5- adding addAddressToDigitalCard function in DigitalCardService&#10;6- completing all the implemented functions in DigitalCardServiceImpl in addition the added addAddressToDigitalCard function" />
+    <MESSAGE value="1- filling CardController by adding:&#10;          - @PostMapping(&quot;/all&quot;): returns all the cards in database&#10;          - @PostMapping(&quot;/add&quot;): I don't have to explain&#10;          - @PostMapping(&quot;/update&quot;): also here&#10;          - @PostMapping(&quot;/delete&quot;): no comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- filling CardController by adding:&#10;          - @PostMapping(&quot;/all&quot;): returns all the cards in database&#10;          - @PostMapping(&quot;/add&quot;): I don't have to explain&#10;          - @PostMapping(&quot;/update&quot;): also here&#10;          - @PostMapping(&quot;/delete&quot;): no comment" />
   </component>
 </project>
