@@ -14,53 +14,31 @@ public class DigitalCardServiceImpl implements DigitalCardService{
     @Autowired
     DegitalCardRepository CardRepository;
     @Override
-    public boolean addDigitalCard(DigitalCard digitalCard) {
-        if(CardRepository.existsById(digitalCard.getId()) || CardRepository.findByName(digitalCard.getName()).isPresent()){
-            return false;
-        }
+    public void addDigitalCard(DigitalCard digitalCard) {
         CardRepository.save(digitalCard);
-        return true;
     }
 
     @Override
-    public boolean updateDigitalCard(DigitalCard digitalCard) {
-        if(CardRepository.existsById(digitalCard.getId())) {
+    public void updateDigitalCard(DigitalCard digitalCard) {
+        DigitalCard digitalCard1 = CardRepository.findById(digitalCard.getId()).get();
+        if (digitalCard1 != null) {
             CardRepository.save(digitalCard);
-            return true;
         }
-        return false;
     }
 
     @Override
-    public boolean deleteDigitalCard(DigitalCard digitalCard) {
-        if(CardRepository.existsById(digitalCard.getId())) {
-            CardRepository.delete(digitalCard);
-            return true;
-        }
-        return false;
+    public void deleteDigitalCard(DigitalCard digitalCard) {
+           CardRepository.delete(digitalCard);
     }
 
     @Override
     public List<DigitalCard> getAllDigitalCards() {
         return CardRepository.findAll();
     }
-    @Override
-    public DigitalCard getDigitalCardById(Long id) {
-        Optional<DigitalCard> optionalDigitalCard = CardRepository.findById(id);
-        return optionalDigitalCard.orElse(null);
-    }
 
     @Override
-    public boolean addAddressToDigitalCard(Long id, String street_address, String city, String state, String zip_code,String country)
-    {
-        Optional<DigitalCard> optionalDigitalCard = CardRepository.findById(id);
-        if(optionalDigitalCard.isPresent())
-        {
-            DigitalCard digitalCard = optionalDigitalCard.get();
-            digitalCard.setAddress(street_address,city,state,zip_code,country);
-            CardRepository.save(digitalCard);
-            return true;
-        }
-        return false;
+    public DigitalCard getDigitalCardById(Long id) {
+        return CardRepository.findById(id).get();
     }
+
 }

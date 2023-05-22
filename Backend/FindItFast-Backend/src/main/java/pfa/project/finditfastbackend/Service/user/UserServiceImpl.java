@@ -7,6 +7,7 @@ import pfa.project.finditfastbackend.Repository.UserRepository;
 import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.AuthenticationException;
 import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlreadyExistException;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,24 +17,21 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public boolean register(User user) throws UserAlreadyExistException {
-        if (userRepository.existsByEmail(user.getEmail())) {
-            throw new UserAlreadyExistException("Email already exists: " + user.getEmail());
-        }
+    public void register(User user){
         userRepository.save(user);
-        return true;
     }
 
     @Override
-    public boolean login(String email, String password) throws AuthenticationException {
-        Optional<User> userOptional = userRepository.findByEmail(email);
-        if (!userOptional.isPresent()) {
-            throw new AuthenticationException("Invalid email or password");
+    public boolean login(String email, String password){
+        User user = userRepository.findByEmail(email, password);
+        if(user != null){
+            return true;
         }
-        User user = userOptional.get();
-        if (!user.getPassword().equals(password)) {
-            throw new AuthenticationException("Invalid email or password");
-        }
-        return true;
+        return false;
+    }
+
+    @Override
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
     }
 }

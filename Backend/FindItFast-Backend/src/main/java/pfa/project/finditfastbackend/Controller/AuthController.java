@@ -15,27 +15,16 @@ import pfa.project.finditfastbackend.CustomExceptions.UserExceptions.UserAlready
 @RequestMapping("api/auth")
 public class AuthController {
 
-    private final UserService userService;
-
-    public AuthController(UserService userService) {
-        this.userService = userService;
-    }
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody User user) throws UserAlreadyExistException {
-        if (userService.register(user)) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.status(HttpStatus.CONFLICT).build();
-        }
+    public void registerUser(@Valid @RequestBody User user){
+        userService.register(user);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestParam("email") String email, @RequestParam("password") String password) throws AuthenticationException {
-        if (userService.login(email, password)) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
+    public boolean loginUser(@RequestParam("email") String email, @RequestParam("password") String password){
+        return userService.login(email, password);
     }
 }
