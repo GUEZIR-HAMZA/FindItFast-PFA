@@ -8,10 +8,10 @@ import java.util.Optional;
 
 public interface DegitalCardRepository extends JpaRepository<DigitalCard, Long> {
     @Query("SELECT d FROM DigitalCard d WHERE d.id =:id")
-    Optional<DigitalCard> findById(Long id);
+    DigitalCard findById(long id);
 
     @Query("SELECT d FROM DigitalCard d WHERE d.name =:name")
-    Optional<DigitalCard> findByName(String name);
+    DigitalCard findByName(String name);
 }
 
 
