@@ -1,0 +1,185 @@
+{
+  "Header": {
+    "title": "Find It Fast",
+    "paragraph": "Finding someone's contact information can be tedious. With Find it Fast, everything is easier. Generate a personalized QR code containing all your contact information and share it with your friends, family, and colleagues. Our secure and user-friendly application will allow you to communicate more efficiently and stay in touch with your loved ones and clients. "
+  },
+  "About": {
+    "paragraph": "Welcome to Find it Fast, the application that provides you with a simple and efficient solution for sharing your information with your contacts, family, and friends with just one QR code scan.With our application, you can easily enter your personal information and store it securely to generate a personalized QR code that you can share with others. With Find it Fast, you can optimize your customer information collection process, enhance their experience, and build loyalty. Join us now and discover how our application can help you grow your business.",
+    
+    "Why": [
+      "Innovation",
+      "Expertise",
+      "Large compatibility",
+      "Regular updates"
+    ],
+    "Why2": [
+      "Quality of service",
+      "Ease of sharing",
+      "Continuous improvements",
+      "Positive reputation"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpeg",
+      "smallImage": "img/portfolio/02-small.jpeg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Cross-Platform Compatibility",
+      "text": "Our application is optimized for use on all devices, from desktop computers to smartphones and everything in between."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Seamless Information Sharing",
+      "text": "Our platform allows for seamless sharing of information and data between users, ensuring that everyone is on the same page."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Safe and Accessible Data",
+      "text": " Our cloud-based infrastructure ensures that your data is always safe and accessible, no matter where you are."
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "Multilingual Support",
+      "text": "Our application supports multiple languages, making it easy to connect with people all over the world."
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "Global Information Sharing",
+      "text": "Our application allows you to easily share your information with people around the world, no matter where you are located."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Powerful Analytics Tools",
+      "text": "Our powerful analytics tools give you valuable insights into your data, allowing you to make informed decisions and improve your business processes."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"I can't imagine going back to the old way of sharing contact information. Find it Fast is quick, convenient, and reliable. Highly recommend it!\"",
+      "name": "mohamed lharoui "
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"I'm impressed with the wide compatibility of Find it Fast with different devices, making it very convenient and accessible.\"",
+      "name": "Ismail Maatawi"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Find it Fast is the perfect application to share my information with my contacts. It's secure and has optimized my customer information collection process..\"",
+      "name": "Adam Samih"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Find it Fast has helped me stay organized and professional when it comes to sharing my information. It's definitely the best application ever!.\"",
+      "name": "Khadija Zawak"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"As someone who values privacy, I appreciate that Find it Fast takes security seriously. And the fact that it streamlines the information-sharing process is just a bonus!.\"",
+      "name": "Kabir Mouhtaram"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"I was skeptical at first, but Find it Fast really does make it easy to share my information securely. It has saved me so much time and hassle!.\"",
+      "name": "Celine Etedi"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/guez.jpg",
+      "name": "GUEZIR Hamza",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/nour.jpg",
+      "name": "MAROUB Nour-Eddine",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/me.jpg",
+      "name": "EL MEHDI Ines",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/etr.jpg",
+      "name": "ELAATAR Yahya",
+      "job": "Senior Designer"
+    }
+  ],
+  "Contact": {
+    "address": "98 Angle Bv Hassan II , Gueliz Marrakech, Maroc ",
+    "phone": "+212 661 62 63 61",
+    "email": "find.it.fast@company.com",
+    "facebook": "FindItFast.com",
+    "twitter": "FindItFast.com",
+    "youtube": "FindItFast.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Conversation",
+      "text": " Effortlessly communicate and share information with your contacts through our application's messaging feature, powered by secure QR code sharing."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Speak",
+      "text": "Stay informed and up-to-date with our application's notification system, which keeps you in the loop with real-time updates."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Group",
+      "text": "Connect and share your information with your friends, family, and colleagues using our application's secure QR code sharing feature, all in one place."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Wand",
+      "text": "Transform the way you share and collect information with our application's powerful QR code generator, making it easy to share your contact details and location with just a scan."
+    }
+  ]
+}

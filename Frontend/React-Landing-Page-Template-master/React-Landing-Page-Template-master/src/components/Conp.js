@@ -1,0 +1,350 @@
+ import styled from 'styled-components';
+
+ export const Container = styled.div`
+ position:relative;
+ background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+ overflow: hidden;
+ width: 678px;
+ min-height: 400px;
+ margin-left:-23%;
+
+ `;
+
+ export const SignUpContainer = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+  ${props => props.signinIn !== true ? `
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+  ` 
+  : null}
+ `;
+ 
+
+ export const SignInContainer = styled.div`
+ position: absolute;
+ top: 0;
+ height: 100%;
+ transition: all 0.6s ease-in-out;
+ left: 0;
+ width: 50%;
+ z-index: 2;
+ ${props => (props.signinIn !== true ? `transform: translateX(100%);` : null)}
+ `;
+ 
+ export const Form = styled.form`
+
+ background-color: #ffffff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ padding: 0 50px;
+ height: 100%;
+ text-align: center;
+ `;
+ 
+ export const Title = styled.h1`
+ font-weight: bold;
+ margin: 0;
+ `;
+ 
+ export const Input = styled.input`
+ background-color: #eee;
+ border: none;
+ padding: 10px 15px;
+ margin: 8px 10px 0;
+ width: 100%;
+
+ `;
+ 
+ export const Button1 = styled.button`
+ font-family: Montserrat,sans-serif; 
+ font-size: 12px;
+ font-weight: bold;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ padding: 12px 45px;
+ border-radius: 20px; 
+ margin : 20px;
+ border: none;
+ outline: none;
+ color: rgb(0, 0, 0);
+ background: #111;
+ cursor: pointer;
+ position: relative;
+ z-index: 0; 
+ width: 150px;
+ height: 40px;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+    
+    
+    &:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #0011ff,
+        #00ffea
+      );
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background-size: 400%;
+      z-index: -1;
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      width: calc(100% + 5px);
+      height: calc(100% + 7px);
+      animation: glowing-button-85 15s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    &:after {
+      z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+    }
+`;
+
+
+
+
+
+
+
+export const Button2 = styled.button`
+font-family: Montserrat,sans-serif; 
+ font-size: 12px;
+ font-weight: bold;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ padding: 12px 45px;
+ border-radius: 20px; 
+ text-align: center;
+ border: none;
+ outline: none;
+ color: rgb(0, 0, 0);
+ background: #111;
+ cursor: pointer;
+ position: relative;
+ z-index: 0; 
+ width: 150px;
+ height: 40px;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+    
+    
+    &:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #0011ff,
+        #00ffea
+      );
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background-size: 400%;
+      z-index: -1;
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      width: calc(100% + 5px);
+      height: calc(100% + 7px);
+      animation: glowing-button-85 15s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    &:after {
+      z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+    }
+`;
+
+ export const Button = styled.button`
+ position: absolute;
+ top: 80%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 140px;
+ height: 40px;
+ text-align: left;
+ font-weight: bold;
+ letter-spacing: 1px;
+ color: #fff;
+ font-size: 12px;
+ text-transform: uppercase;
+ font-family: Montserrat,sans-serif;
+ box-sizing: border-box;
+ background: linear-gradient(90deg,, #00ff9d, #339476, #2e5cfe,#2e5cfe);
+ background-size: 400%;
+ text-align: center;
+ border-radius: 10px;
+ border: 1px solid #000000;
+ z-index: 1;
+
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+      animation: animate 8s linear infinite;
+      @keyframes animate {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 400%;
+        }
+    }
+    &:hover:before {
+      filter: blur(20px);
+      opacity: 1;
+      animation: animate 8s linear infinite;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(45deg,#00f7ed,#2e5cfe, #2e5cfe, #00f7ed);
+      background-size: 300%;
+      border-radius: 40px;
+      opacity: 0;
+      transition: 0.5%;
+    }
+ `;
+
+ export const GhostButton = styled(Button)`
+ background-color: transparent;
+ border-color: #ffffff;
+ `;
+ 
+ export const Anchor = styled.a`
+ color: #333;
+ font-size: 14px;
+ text-decoration: none;
+ margin: 15px 0;
+ `;
+
+ export const OverlayContainer = styled.div`
+position: absolute;
+top: 0;
+left: 50%;
+width: 50%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease-in-out;
+z-index: 100;
+${props =>
+  props.signinIn !== true ? `transform: translateX(-100%);` : null}
+`;
+
+export const Overlay = styled.div`
+
+background: -webkit-linear-gradient(to right, white, black);
+background:  linear-gradient(
+  157.81deg,
+  #ffffff -43.27%,
+  #b8fbe4 -21.24%,
+  #42fff3 12.19%,
+  #26bdf1 29.82%,
+  #425dff 51.94%,
+  #42fff3 90.29%
+);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0 0;
+color: #ffffff;
+position: relative;
+left: -100%;
+height: 100%;
+width: 200%;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+${props => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
+`;
+ 
+ export const OverlayPanel = styled.div`
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 0 40px;
+     text-align: center;
+     top: 0;
+     height: 100%;
+     width: 50%;
+     transform: translateX(0);
+     transition: transform 0.6s ease-in-out;
+ `;
+
+ export const LeftOverlayPanel = styled(OverlayPanel)`
+   transform: translateX(-20%);
+   ${props => props.signinIn !== true ? `transform: translateX(0);` : null}
+ `;
+
+ export const RightOverlayPanel = styled(OverlayPanel)`
+     right: 0;
+     transform: translateX(0);
+     ${props => props.signinIn !== true ? `transform: translateX(20%);` : null}
+ `;
+
+ export const Paragraph = styled.p`
+ font-size: 14px;
+   font-weight: 100;
+   line-height: 20px;
+   letter-spacing: 0.5px;
+   margin: 20px 0 30px
+ `;
